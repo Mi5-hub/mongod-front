@@ -29,7 +29,7 @@ export default class Register extends React.Component {
       this.props.history.push('/');
     }).catch((err) => {
       swal({
-        text: err.response.data.errorMessage,
+        text: "err.response.data.errorMessage,"
         icon: "error",
         type: "error"
       });
