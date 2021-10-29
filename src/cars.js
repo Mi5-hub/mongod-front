@@ -21,7 +21,7 @@ export default function Cars() {
 
   useEffect(() => {
     // GET request using axios inside useEffect React hook
-    axios.get('http://localhost:2000/getAll')
+    axios.get('https://back-sayna.herokuapp.com/getAll')
       .then(car => setcar(car.data.cars));
 
     // empty dependency array means this effect will only run once (like componentDidMount in classes)
@@ -53,7 +53,7 @@ export default function Cars() {
 
               <div className=" mt-8 space-x-1 space-y-2">
                 <div className="car">
-                  <img className="z-1 img1 mb-6 m-auto" src={`http://localhost:2000/${i.image}`}></img>
+                  <img className="z-1 img1 mb-6 m-auto" src={`https://back-sayna.herokuapp.com/${i.image}`}></img>
                   <p className="m-auto px-2 text-left txt-name">{i.name}</p>
 
                   <Button variant="contained" color="primary" href="/Login">
